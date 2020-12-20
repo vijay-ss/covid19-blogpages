@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Investigating Ontario’s Covid-19 Spread | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Investigating Ontario’s Covid-19 Spread" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Insights into the Covid-19 spread in Ontario, Canada." />
+<meta property="og:description" content="Insights into the Covid-19 spread in Ontario, Canada." />
+<link rel="canonical" href="https://vijay-ss.github.io/covid19-blogpages/jupyter/2020/12/19/covid19-ontario-copy.html" />
+<meta property="og:url" content="https://vijay-ss.github.io/covid19-blogpages/jupyter/2020/12/19/covid19-ontario-copy.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://vijay-ss.github.io/covid19-blogpages/images/test.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-19T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Insights into the Covid-19 spread in Ontario, Canada.","url":"https://vijay-ss.github.io/covid19-blogpages/jupyter/2020/12/19/covid19-ontario-copy.html","@type":"BlogPosting","headline":"Investigating Ontario’s Covid-19 Spread","dateModified":"2020-12-19T00:00:00-06:00","datePublished":"2020-12-19T00:00:00-06:00","image":"https://vijay-ss.github.io/covid19-blogpages/images/test.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://vijay-ss.github.io/covid19-blogpages/jupyter/2020/12/19/covid19-ontario-copy.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/covid19-blogpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://vijay-ss.github.io/covid19-blogpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/covid19-blogpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/covid19-blogpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/covid19-blogpages/about/">About Me</a><a class="page-link" href="/covid19-blogpages/search/">Search</a><a class="page-link" href="/covid19-blogpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Investigating Ontario&#39;s Covid-19 Spread</h1><p class="page-description">Insights into the Covid-19 spread in Ontario, Canada.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-19T00:00:00-06:00" itemprop="datePublished">
+        Dec 19, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/covid19-blogpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/vijay-ss/covid19-blogpages/tree/master/_notebooks/2020-12-19-covid19-ontario copy.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/covid19-blogpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/vijay-ss/covid19-blogpages/master?filepath=_notebooks%2F2020-12-19-covid19-ontario+copy.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/covid19-blogpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/vijay-ss/covid19-blogpages/blob/master/_notebooks/2020-12-19-covid19-ontario copy.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/covid19-blogpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Geographical-Spread-of-Cases">Geographical Spread of Cases </a></li>
+<li class="toc-entry toc-h1"><a href="#Timeline-of-Cases">Timeline of Cases </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Infection-Rate-Compared-to-Notable-Public-Events-&-Announcements">Infection Rate Compared to Notable Public Events &amp; Announcements </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Deaths">Deaths </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Overview-of-Fatalities-by-Age-Group">Overview of Fatalities by Age Group </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-12-19-covid19-ontario copy.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div id="number-plate" style="background-color: #ececec; padding: 30px; text-align: center; marginTop: 1%; marginBottom: 1%;">
+<p style="color: black; font-size: 32px"> Ontario Covid-19 Cases to Date</p>
+<div id="confirmed" style="display: inline-block"> <span style="color: black; font-size: 23px;"> Confirmed: 153,614</span><br> <span style="color: black; font-size:15px; "> +2,357 (+1.56%)</span>
+</div>
+<div id="resolved" style="display: inline-block"> <span style="color: #228b22; font-size: 23px; margin-left: 20px;"> Resolved: 131,282</span><br> <span style="color: black; font-size:15px; ">+1,865 (+1.44%)</span>
+</div>
+<div id="active" style="display: inline-block"> <span style="color: orange; font-size: 23px; margin-left: 20px;"> Active: 18,207</span><br> <span style="color: black; font-size:15px; ">+465 (+2.62%)</span>
+</div>
+<div id="deaths" style="display: inline-block"> <span style="color: red; font-size: 23px; margin-left: 20px;"> Deaths: 4,125</span><br> <span style="color: black; font-size:15px; ">+27 (+0.66%)</span>
+</div>
+<br><div id="rates" style="display: block; marginTop: 1%;"> <div id="deathrate" style="display: inline-block"> <span style="color: black;"> Current Death Rate: </span><span style="color: red">2.69%</span>
+</div>
+<div id="survivalrate" style="display:inline-block"> <span style="color: black; margin-left: 20px;"> Current Survival Rate: </span><span style="color: #228b22">97.31%</span>
+</div>
+</div>
+<span style="color: black; font-size: 11px;"> Ontario data last updated: 2020-12-19, Refreshed on: 2020-12-19 at 21:39</span>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Geographical-Spread-of-Cases">
+<a class="anchor" href="#Geographical-Spread-of-Cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Geographical Spread of Cases<a class="anchor-link" href="#Geographical-Spread-of-Cases"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Timeline-of-Cases">
+<a class="anchor" href="#Timeline-of-Cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Timeline of Cases<a class="anchor-link" href="#Timeline-of-Cases"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div style="text-Align: right; margin-right: 10%;"> <span style="text-align: right"> **Note that testing data is not available prior to April 15, 2020. </span> </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Infection-Rate-Compared-to-Notable-Public-Events-&amp;-Announcements">
+<a class="anchor" href="#Infection-Rate-Compared-to-Notable-Public-Events-&amp;-Announcements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infection Rate Compared to Notable Public Events &amp; Announcements<a class="anchor-link" href="#Infection-Rate-Compared-to-Notable-Public-Events-&amp;-Announcements"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Deaths">
+<a class="anchor" href="#Deaths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deaths<a class="anchor-link" href="#Deaths"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Overview-of-Fatalities-by-Age-Group">
+<a class="anchor" href="#Overview-of-Fatalities-by-Age-Group" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview of Fatalities by Age Group<a class="anchor-link" href="#Overview-of-Fatalities-by-Age-Group"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style type="text/css">
+#T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col0,#T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col0{
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col1,#T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col2,#T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col1,#T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col2,#T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col2,#T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col2{
+            background-color:  #fff5f0;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col3,#T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col3,#T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col3,#T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col3{
+            background-color:  #00441b;
+            color:  #f1f1f1;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col1{
+            background-color:  #fff4ef;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col1{
+            background-color:  #fff2eb;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col1{
+            background-color:  #fee7db;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col2{
+            background-color:  #fff3ed;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col3{
+            background-color:  #00481d;
+            color:  #f1f1f1;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col1{
+            background-color:  #fcbfa7;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col2{
+            background-color:  #ffebe2;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col3{
+            background-color:  #005723;
+            color:  #f1f1f1;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col1{
+            background-color:  #fb7151;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col2{
+            background-color:  #fcbca2;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col3{
+            background-color:  #228a44;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col1,#T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col2{
+            background-color:  #67000d;
+            color:  #f1f1f1;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col2{
+            background-color:  #e93529;
+            color:  #f1f1f1;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col3{
+            background-color:  #a8dca2;
+            color:  #000000;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col1{
+            background-color:  #9a0c14;
+            color:  #f1f1f1;
+            text-align:  center;
+        }#T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col3{
+            background-color:  #f7fcf5;
+            color:  #000000;
+            text-align:  center;
+        }</style>
+<table id="T_94294852_426c_11eb_bf9e_a92236ef45f8">
+<thead>    <tr>        <th class="col_heading level0 col0">Age Group</th>        <th class="col_heading level0 col1">Deaths</th>        <th class="col_heading level0 col2">Death Rate</th>        <th class="col_heading level0 col3">Survival Rate</th>    </tr>
+</thead>
+<tbody>
+                <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col0" class="data row0 col0">0-19</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col1" class="data row0 col1">1</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col2" class="data row0 col2">0.01%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row0_col3" class="data row0 col3">99.99%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col0" class="data row1 col0">20s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col1" class="data row1 col1">6</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col2" class="data row1 col2">0.02%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row1_col3" class="data row1 col3">99.98%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col0" class="data row2 col0">30s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col1" class="data row2 col1">10</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col2" class="data row2 col2">0.04%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row2_col3" class="data row2 col3">99.96%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col0" class="data row3 col0">40s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col1" class="data row3 col1">33</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col2" class="data row3 col2">0.15%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row3_col3" class="data row3 col3">99.85%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col0" class="data row4 col0">50s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col1" class="data row4 col1">132</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col2" class="data row4 col2">0.60%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row4_col3" class="data row4 col3">99.40%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col0" class="data row5 col0">60s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col1" class="data row5 col1">358</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col2" class="data row5 col2">2.57%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row5_col3" class="data row5 col3">97.43%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col0" class="data row6 col0">70s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col1" class="data row6 col1">725</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col2" class="data row6 col2">10.37%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row6_col3" class="data row6 col3">89.63%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col0" class="data row7 col0">80s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col1" class="data row7 col1">1509</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col2" class="data row7 col2">26.91%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row7_col3" class="data row7 col3">73.09%</td>
+            </tr>
+            <tr>
+                                <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col0" class="data row8 col0">90s</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col1" class="data row8 col1">1351</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col2" class="data row8 col2">41.58%</td>
+                        <td id="T_94294852_426c_11eb_bf9e_a92236ef45f8row8_col3" class="data row8 col3">58.42%</td>
+            </tr>
+    </tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="vijay-ss/covid19-blogpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/covid19-blogpages/jupyter/2020/12/19/covid19-ontario-copy.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/covid19-blogpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/covid19-blogpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/covid19-blogpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/covid19-blogpages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/covid19-blogpages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
