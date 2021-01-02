@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Overview of Ontario's Covid-19 Spread",
-            "content": "Ontario Covid-19 Cases to Date . Confirmed: 182,159 +3,328 (+1.86%) Resolved: 156,012 +2,213 (+1.44%) Active: 21,617 +1,059 (+5.15%) Deaths: 4,530 +56 (+1.25%) Current Death Rate: 2.49% Current Survival Rate: 97.51% Ontario data last updated: 2020-12-31, Refreshed on: 2021-01-01 at 23:05 Geographical Spread of Cases . . . Timeline of Cases . . . . . **Note that testing data is not available prior to April 15, 2020.",
+            "content": "Ontario Covid-19 Cases to Date . Confirmed: 187,998 +3,363 (+1.82%) Resolved: 160,526 +2,054 (+1.30%) Active: 22,847 +1,265 (+5.86%) Deaths: 4,625 +44 (+0.96%) Current Death Rate: 2.46% Current Survival Rate: 97.54% Ontario data last updated: 2021-01-02, Refreshed on: 2021-01-02 at 16:57 Geographical Spread of Cases . . . Timeline of Cases . . . . . **Note that testing data is not available prior to April 15, 2020.",
             "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/01/01/_12_20_Ontario_Overview.html",
             "relUrl": "/jupyter/2021/01/01/_12_20_Ontario_Overview.html",
             "date": " • Jan 1, 2021"
