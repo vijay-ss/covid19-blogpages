@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Analysis of Ontario Death Rates",
-            "content": "Ontario Covid-19 Cases to Date . Confirmed: 260,370 +1,670 (+0.65%) Resolved: 232,480 +2,725 (+1.19%) Active: 21,932 -1,104 (-4.79%) Deaths: 5,958 +49 (+0.83%) Current Death Rate: 2.29% Current Survival Rate: 97.71% Ontario data last updated: 2021-01-27, Refreshed on: 2021-01-27 at 21:51 Deaths . Overview of Fatalities by Age Group . Age Group Deaths Death Rate Survival Rate . 0-19 | 2 | 0.01% | 99.99% | . 20s | 8 | 0.01% | 99.99% | . 30s | 14 | 0.03% | 99.97% | . 40s | 46 | 0.12% | 99.88% | . 50s | 177 | 0.47% | 99.53% | . 60s | 504 | 2.11% | 97.89% | . 70s | 1102 | 9.12% | 90.88% | . 80s | 2158 | 23.34% | 76.66% | . 90s | 1946 | 38.60% | 61.40% | . . .",
+            "content": "Ontario Covid-19 Cases to Date . Confirmed: 276,718 +1,388 (+0.50%) Resolved: 254,966 +1,796 (+0.71%) Active: 15,269 -453 (-2.88%) Deaths: 6,483 +45 (+0.70%) Current Death Rate: 2.34% Current Survival Rate: 97.66% Ontario data last updated: 2021-02-06, Refreshed on: 2021-02-06 at 12:25 Deaths . Overview of Fatalities by Age Group . Age Group Deaths Death Rate Survival Rate . 0-19 | 2 | 0.01% | 99.99% | . 20s | 8 | 0.01% | 99.99% | . 30s | 17 | 0.04% | 99.96% | . 40s | 51 | 0.13% | 99.87% | . 50s | 196 | 0.48% | 99.52% | . 60s | 554 | 2.18% | 97.82% | . 70s | 1200 | 9.37% | 90.63% | . 80s | 2367 | 24.51% | 75.49% | . 90s | 2087 | 39.71% | 60.29% | . . .",
             "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/02/05/_12_22_covid19_deaths.html",
             "relUrl": "/jupyter/2021/02/05/_12_22_covid19_deaths.html",
             "date": " • Feb 5, 2021"
