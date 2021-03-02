@@ -3,10 +3,10 @@
     
         "post0": {
             "title": "Analysis of Ontario Death Rates",
-            "content": "Ontario Covid-19 Cases to Date . Confirmed: 298,569 +1,258 (+0.42%) Resolved: 281,331 +1,007 (+0.36%) Active: 10,294 +223 (+2.21%) Deaths: 6,944 +28 (+0.40%) Current Death Rate: 2.33% Current Survival Rate: 97.67% Ontario data last updated: 2021-02-26, Refreshed on: 2021-02-26 at 20:53 Deaths . Overview of Fatalities by Age Group . Age Group Deaths Death Rate Survival Rate . 0-19 | 2 | 0.01% | 99.99% | . 20s | 9 | 0.01% | 99.99% | . 30s | 20 | 0.04% | 99.96% | . 40s | 57 | 0.13% | 99.87% | . 50s | 223 | 0.51% | 99.49% | . 60s | 594 | 2.17% | 97.83% | . 70s | 1303 | 9.54% | 90.46% | . 80s | 2538 | 25.18% | 74.82% | . 90+ | 2197 | 41.04% | 58.96% | . UNKNOWN | 1 | 1.59% | 98.41% | . . .",
-            "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/02/26/_12_22_covid19_deaths.html",
-            "relUrl": "/jupyter/2021/02/26/_12_22_covid19_deaths.html",
-            "date": " • Feb 26, 2021"
+            "content": "Ontario Covid-19 Cases to Date . Confirmed: 302,805 +966 (+0.32%) Resolved: 285,262 +979 (+0.34%) Active: 10,546 -24 (-0.23%) Deaths: 6,997 +11 (+0.16%) Current Death Rate: 2.31% Current Survival Rate: 97.69% Ontario data last updated: 2021-03-02, Refreshed on: 2021-03-02 at 10:30 Deaths . Overview of Fatalities by Age Group . Age Group Deaths Death Rate Survival Rate . 0-19 | 2 | 0.00% | 100.00% | . 20s | 10 | 0.02% | 99.98% | . 30s | 20 | 0.04% | 99.96% | . 40s | 58 | 0.14% | 99.86% | . 50s | 225 | 0.51% | 99.49% | . 60s | 605 | 2.18% | 97.82% | . 70s | 1316 | 9.51% | 90.49% | . 80s | 2553 | 25.21% | 74.79% | . 90+ | 2207 | 41.14% | 58.86% | . UNKNOWN | 1 | 1.59% | 98.41% | . . .",
+            "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/03/01/_12_22_covid19_deaths.html",
+            "relUrl": "/jupyter/2021/03/01/_12_22_covid19_deaths.html",
+            "date": " • Mar 1, 2021"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Infection Rate vs Public Announcements and Events",
             "content": ". . . .",
-            "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/02/26/_12_21_key_dates.html",
-            "relUrl": "/jupyter/2021/02/26/_12_21_key_dates.html",
-            "date": " • Feb 26, 2021"
+            "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/03/01/_12_21_key_dates.html",
+            "relUrl": "/jupyter/2021/03/01/_12_21_key_dates.html",
+            "date": " • Mar 1, 2021"
         }
         
     
@@ -26,9 +26,9 @@
         ,"post2": {
             "title": "Overview of Ontario's Covid-19 Spread",
             "content": "Ontario Covid-19 Cases to Date . Confirmed: 298,569 +1,258 (+0.42%) Resolved: 281,331 +1,007 (+0.36%) Active: 10,294 +223 (+2.21%) Deaths: 6,944 +28 (+0.40%) Current Death Rate: 2.33% Current Survival Rate: 97.67% Ontario data last updated: 2021-02-26, Refreshed on: 2021-02-26 at 20:50 Geographical Spread of Cases . . . Timeline of Cases . . . . . **Note that testing data is not available prior to April 15, 2020.",
-            "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/02/26/_12_20_Ontario_Overview.html",
-            "relUrl": "/jupyter/2021/02/26/_12_20_Ontario_Overview.html",
-            "date": " • Feb 26, 2021"
+            "url": "https://vijay-ss.github.io/covid19-blogpages/jupyter/2021/03/01/_12_20_Ontario_Overview.html",
+            "relUrl": "/jupyter/2021/03/01/_12_20_Ontario_Overview.html",
+            "date": " • Mar 1, 2021"
         }
         
     
